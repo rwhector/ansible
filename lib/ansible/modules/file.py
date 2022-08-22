@@ -42,7 +42,8 @@ options:
     - If C(link), the symbolic link will be created or changed.
     - If C(touch) (new in 1.4), an empty file will be created if the file does not
       exist, while an existing file or directory will receive updated file access and
-      modification times (similar to the way C(touch) works from the command line).
+      modification times (similar to the way C(touch) works from the command line)
+      (this can be avoided by setting access_time or modification_time as appropriate).
     - Default is the current state of the file if it exists, C(directory) if C(recurse=yes), or C(file) otherwise.
     type: str
     choices: [ absent, directory, file, hard, link, touch ]
